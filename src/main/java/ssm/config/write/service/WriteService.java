@@ -15,4 +15,7 @@ public class WriteService {
 		write.addUser(user);
 	}
 
+	public void updateUser(String id, String user) {
+		write.updateUser(id,user);
+	}
 }

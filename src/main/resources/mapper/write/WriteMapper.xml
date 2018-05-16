@@ -4,4 +4,7 @@
 	<insert id="addUser" parameterType="string">
 		insert user(name) values(#{name})
 	</insert>
+	<update id="updateUser">
+		update user set name=#{name} where id=#{id}
+	</update>
 </mapper>

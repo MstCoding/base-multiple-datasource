@@ -31,9 +31,16 @@ public class HomeController {
 	}
 
 	@ResponseBody
+	@RequestMapping(value = "/update/{id}", method = { RequestMethod.GET })
+	public Object add(@PathVariable String id, String user) {
+		write.updateUser(id, user);
+		return user;
+	}
+
+	@ResponseBody
 	@RequestMapping(value = "/get/{id}", method = { RequestMethod.GET })
 	public Object get(@PathVariable int id) {
-		return read.getUserById(id);
+		return read.getUserById(id) + "_read";
 	}
 
 }
